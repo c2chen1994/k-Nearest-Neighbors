@@ -136,19 +136,6 @@ def data_processing(data):
 	return Xtrain, ytrain, Xval, yval, Xtest, ytest
 	
 def main():
-	a = np.array([[1,2,3],[2,3,4],[3,4,5],[4,5,6]])
-	b = np.array([[5,6,7],[6,7,8]])
-	c = np.dot(a, np.transpose(b))
-	d = np.tile(np.sum(a ** 2, axis = 1).reshape(4,1),(1,2))
-	e = np.tile(np.sum(b ** 2, axis = 1).reshape(2,1),(1,4))
-	dis = (d + np.transpose(e) - 2 * c)
-	y = np.array([1,0,1])
-	f = np.array([[1,3,2],[4,2,3],[3,4,5],[6,4,4]])
-	g = np.array([1,1,0,1,0,1,1,0])
-	h = np.array([0,1,0,1,1,0,1,1])
-	print(stats.mode(y[np.argsort(f)[:,range(2)]], axis=1)[0])
-	print(np.sum(g == h))
-	
 	input_file = 'mnist_subset.json'
 	output_file = 'knn_output.txt'
 
